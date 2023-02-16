@@ -1,6 +1,6 @@
 import microcontroller
-from brteve.brt_eve_bt817_8 import BrtEve
-from brteve.brt_eve_rp2040 import BrtEveRP2040
+from lib.brteve.brt_eve_bt817_8 import BrtEve
+from lib.brteve.brt_eve_rp2040 import BrtEveRP2040
 
 def lerp(t, a, b):
     return a + (b - a) * t
@@ -54,6 +54,6 @@ def celsius():
 
 host = BrtEveRP2040()
 eve = BrtEve(host)
-eve.init(resolution="1280x800", touch="goodix")
+eve.init(resolution="800x480", touch="goodix")
 
 temperature(eve, celsius)
